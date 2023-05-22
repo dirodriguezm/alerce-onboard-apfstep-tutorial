@@ -1,0 +1,10 @@
+version: "3"
+services:
+  step:
+    build: .
+    volumes:
+      - ../data:/data
+    environment:
+      - CONSUMER_FILE_PATH=/data/consumer_input.json
+      - PRODUCER_FILE_PATH=/data
+      - METRICS_FILE_PATH=/data/metrics.txt
